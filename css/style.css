@@ -124,7 +124,7 @@ body {
 :root {
     --footer_height: 100px;
     --app-top_height: 100vh - var(--footer_height);
-    --header_height: 100px;
+    --header_height: 70px;
     --main_height: 100% - var(--header_height);
     --sidebar_width: 40px;
     --app-content_width: 100% - var(--sidebar_width);
@@ -221,7 +221,7 @@ img {
     gap: 0.5rem;
 
     /* ATTIVARE ALLA PUBBLICAZIONE */
-    /* overflow: auto; */
+    overflow: auto;
 }
 
 .sidebar_top {
@@ -279,7 +279,6 @@ img {
 
 .playlist {
     color: #6d6d6d;
-    overflow: auto;
 }
 
 .sidebar h3 {
@@ -353,6 +352,23 @@ header {
     flex-shrink: 0;
     height: var(--header_height);
     background-color: #080b12;
+    padding: 0 0.5rem;
+    
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+header a {
+    vertical-align: center;
+    height: 30px;
+    padding:0.5rem 1.5rem;
+    color: white;
+    border: 2px solid white;
+    border-radius: 15px;
+    line-height:0.7rem;;
+    font-size: 0.7rem;
+
 }
 
 
@@ -375,7 +391,31 @@ main {
 
 footer {
     height: var(--footer_height);
+    width: 100%;
     background-color: #282828;
+
+    display: flex;
+    justify-content: space-between;
+    gap:1.5rem;
+}
+
+footer > .side {
+    width:20%;
+}
+
+footer .left {
+    display: flex;
+    justify-content: space-between;
+    gap:0.5rem;
+}
+
+.current_song.cover {
+    aspect-ratio: 1/1;
+
+}
+
+footer > .player {
+    flex-grow:1;
 }
 
 
@@ -387,7 +427,7 @@ footer {
 @media screen and (min-width:576px) {
 
     :root {
-        --sidebar_width: 200px;
+        --sidebar_width: 170px;
     }
 
     
