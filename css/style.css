@@ -171,10 +171,12 @@ img {
 .wrapper {
     width:100%;
     height: 100vh;
-    overflow: hidden;
-
+    
     display:flex;
     flex-direction: column;
+
+    /* # DEBUG */
+    overflow: hidden;
 }
 
 .container {
@@ -209,6 +211,7 @@ img {
 
 .sidebar {
     flex-grow: 0;
+    flex-shrink: 0;
     width: var(--sidebar_width);
     padding:0.5rem;
     background-color: black;
@@ -221,7 +224,10 @@ img {
     gap: 0.5rem;
 
     /* ATTIVARE ALLA PUBBLICAZIONE */
-    overflow: auto;
+    /* overflow: auto; */
+
+    /* # DEBUG */
+    overflow:hidden;
 }
 
 .sidebar_top {
