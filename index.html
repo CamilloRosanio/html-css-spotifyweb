@@ -16,7 +16,7 @@
         <title>Spotify Web</title>
 
     <!-- FAVICON -->
-        <link rel="icon" type="image/x-icon" href="">
+        <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 
     <!-- INFO AGGIUNTIVE -->
         <meta name="author" content="Camillo Rosanio">
@@ -24,6 +24,9 @@
         <meta name="keywords" content="keyword1, keyword2, keyword3">
 
     <!-- FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <!-- MEDIA LIBRARY -->
         <!-- ***FACOLTATIVO*** Esempio: FONT AWESOME -->
@@ -48,8 +51,53 @@
         <div class="app-top debug">
 
             <!-- SIDEBAR -->
-            <div class="sidebar debug">
-                sidebar
+            <div class="sidebar">
+                
+                <div class="logo_container">
+                    <img class="logo_small" src="./img/logo-small.svg" alt="logo spotify small">
+                    <img class="logo_big" src="./img/logo.svg" alt="logo spotify big">
+                </div>
+
+                <!-- NAV-BAR -->
+                <nav>
+                    <ul>
+                        <li>
+                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"/></svg>
+                            <span> Home</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"  fill-rule="evenodd"/></svg>
+                            <span> Cerca</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z" /></svg>
+                            <span> La tua libreria</span>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- PLAYLIST -->
+                <div class="playlist">
+                    <h3>PLAYLIST</h3>
+
+                    <div class="creation">
+                        <button>+</button>
+                        <span> Crea Playlist</span>
+                    </div>
+
+                    <div>
+                        <ul>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
 
             <!-- APP CONTENT -->
