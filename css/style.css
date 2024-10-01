@@ -14,7 +14,7 @@
     --header_height: 100px;
     --main_height: 100% - var(--header_height);
     --sidebar_width: 40px;
-    --app-content_width: 100% - var(var(--sidebar_width))
+    --app-content_width: 100% - var(--sidebar_width);
 }
 
 /**********************************************************
@@ -134,8 +134,8 @@ footer {
 /* SCREEN / (L) Large */
 @media screen and (min-width:992px) {
     
-    /* selettore */ {
-
+    :root {
+        --sidebar_width: 200px;
     }
 }
 
@@ -156,49 +156,6 @@ footer {
 }
 
 
-/**********************************************************
-| # MEDIAQUERY / DESKTOP FIRST
-**********************************************************/
-
-/* SCREEN / (XXL) Extra-Extra-Large */
-@media screen and (max-width:1400px) {
-    
-    /* selettore */ {
-
-    }
-}
-
-/* SCREEN / (XL) Extra-Large */
-@media screen and (max-width:1200px) {
-    
-    /* selettore */ {
-
-    }
-}
-
-/* SCREEN / (L) Large */
-@media screen and (max-width:992px) {
-    
-    /* selettore */ {
-
-    }
-}
-
-/* SCREEN / (M) Medium */
-@media screen and (max-width:768px) {
-    
-    /* selettore */ {
-
-    }
-}
-
-/* SCREEN / (S) Small */
-@media screen and (max-width:576px) {
-    
-    /* selettore */ {
-
-    }
-}
 
 
 
