@@ -160,6 +160,14 @@ img {
 | # UTILS
 **********************************************************/
 
+/* # DISPLAY */
+
+.hide {
+    display: none;
+}
+
+/* # STRUTTURA */
+
 .wrapper {
     width:100%;
     height: 100vh;
@@ -181,6 +189,9 @@ img {
     height: 100vh - var(--app-top_height);
 
     display:flex;
+
+    /* # DEBUG */
+    color:white;
 }
 
 .app-content {
@@ -202,14 +213,27 @@ img {
     padding:0.5rem;
     background-color: black;
     font-size: 0.7rem;
+    font-weight: 700;
 
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 0.5rem;
 
     /* ATTIVARE ALLA PUBBLICAZIONE */
     /* overflow: auto; */
 }
+
+.sidebar_top {
+    flex-grow: 0;
+    width:100%;
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 
 /* # LOGO SPOTIFY */
 
@@ -219,12 +243,15 @@ img {
 }
 
 .logo_big {
-    display: none;
     width: 120px;
 }
 
 
-/* NAV */
+/* # NAV */
+
+.sidebar nav {
+    margin-bottom: 0.7rem;
+}
 
 .sidebar nav ul {
     color: #6d6d6d;
@@ -247,16 +274,12 @@ img {
     display: inline;
 }
 
-.sidebar nav span {
-    display: none;
-}
-
 
 /* # PLAYLIST */
 
 .playlist {
-    display: none;
     color: #6d6d6d;
+    overflow: auto;
 }
 
 .sidebar h3 {
@@ -289,6 +312,37 @@ img {
     margin-bottom: 0.5rem;
 }
 
+/* # SIDEBAR BOTTOM */
+
+.sidebar_bottom {
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+    color: #6d6d6d;
+}
+
+.sidebar_bottom svg {
+    fill: white;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #6d6d6d;
+}
+
+.sidebar_bottom hr {
+    border-color: #6d6d6d;
+}
+
+.sidebar_bottom a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar_bottom h3 {
+    display: inline;
+}
 
 /**********************************************************
 | # HEADER
@@ -298,6 +352,7 @@ header {
     flex-grow: 0;
     flex-shrink: 0;
     height: var(--header_height);
+    background-color: #080b12;
 }
 
 
@@ -308,6 +363,7 @@ header {
 main {
     flex-grow: 1;
     height: var(--main_height);
+    background-color: #141922;
 
     /* ATTIVARE ALLA PUBBLICAZIONE */
     /* overflow: auto; */
@@ -319,6 +375,7 @@ main {
 
 footer {
     height: var(--footer_height);
+    background-color: #282828;
 }
 
 
@@ -334,7 +391,7 @@ footer {
     }
 
     
-    /* # SIDEBAR */
+    /* # SIDEBAR TOP */
 
     .sidebar {
         padding:1rem;
@@ -361,6 +418,19 @@ footer {
         display: flex;
         flex-direction: column;
         gap:0.8rem;
+    }
+
+
+    /* # SIDEBAR BOTTOM */
+
+    .sidebar_bottom a {
+        display:flex;
+        justify-content: start;
+    }
+    
+    .sidebar_bottom span,
+    .sidebar_bottom hr {
+        display: inline;
     }
 }
 
