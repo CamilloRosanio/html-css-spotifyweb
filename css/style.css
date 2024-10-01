@@ -275,6 +275,20 @@ img {
     gap: 0.5rem;
 }
 
+.sidebar nav a {
+    color: #6d6d6d;
+    fill: #6d6d6d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.sidebar nav a:focus {
+    color: #d2d2d2;
+    fill: #d2d2d2;
+}
+
 .sidebar nav svg {
     width: 20px;
     display: inline;
@@ -316,6 +330,11 @@ img {
 .playlist li {
     margin-bottom: 0.5rem;
 }
+
+.playlist a:focus {
+    color: #d2d2d2;
+}
+
 
 /* # SIDEBAR BOTTOM */
 
