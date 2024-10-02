@@ -325,7 +325,7 @@ img {
             color: white;
         }
 
-        
+
 .sidebar button {
     display:flex;
     justify-content: center;
@@ -633,6 +633,15 @@ footer .left {
     color:#878787;
 }
 
+        /* HOVER */
+
+        .song-info .name p:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+
+
 .left .favorite {
     display: flex;
     flex-wrap: wrap;
@@ -644,6 +653,13 @@ footer .left {
 .left .favorite p {
     color:#878787;
 }
+
+
+        /* HOVER */
+
+        .left .favorite p:hover {
+            color: white;
+        }
 
 
 /* # CENTER - PLAYER */
