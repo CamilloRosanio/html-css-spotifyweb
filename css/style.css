@@ -420,11 +420,11 @@ footer > .side {
 }
 
 
-/* # SONG INFO */
+/* # LEFT - SONG INFO */
 
 footer .left {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap:0.3rem;
 }
@@ -466,19 +466,108 @@ footer .left {
     gap:.2rem;
     justify-content: center;
     align-items: center;
-    height:30%;
 }
 
 .left .favorite p {
     color:#878787;
-    line-height: 0.2rem;
 }
 
 
-/* # PLAYER */
+/* # CENTER - PLAYER */
 
 footer > .player {
     flex-grow:1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:0.5rem;
+}
+
+.player .controller {
+    display: flex;
+    justify-content: space-around;
+}
+
+.player .controller button {
+    font-size: 0.9rem;
+    color: white;
+    border: 0;
+    background-color: transparent;
+
+}
+
+.player .controller .big {
+    font-size: 1.5rem;
+}
+
+.player .progress {
+    color: white;
+    font-size: 0.6rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player .progress .time {
+    width: 15%;
+    text-align: center;
+    font-weight: 600;
+}
+
+.player .progress .bar {
+    height: 3px;
+    background-color: #5a5a5a;
+    flex-grow: 1;
+    border-radius: 35px;
+}
+
+.player .progress .bar_time {
+    height: 3px;
+    width:20%;
+    background-color: #c1c1c1;
+    border-radius: 35px;
+}
+
+
+/* # RIGT - CONTROLS */
+
+footer .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:0.5rem;
+}
+
+footer .right .controls {
+    font-size: 0.5rem;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+footer .right .controls button {
+    border: 0;
+    background-color: transparent;
+}
+
+footer .right .bar {
+    height: 3px;
+    background-color: #5a5a5a;
+    flex-grow: 1;
+    border-radius: 35px;
+}
+
+footer .right .bar_volume {
+    height: 3px;
+    width:75%;
+    background-color: #c1c1c1;
+    border-radius: 35px;
 }
 
 
@@ -535,6 +624,12 @@ footer > .player {
     .sidebar_bottom hr {
         display: inline;
     }
+
+    /* # PLAYER */
+
+    .left .favorite p {
+        padding:0.2rem;
+    }
 }
 
 /* SCREEN / (M) Medium */
@@ -556,8 +651,13 @@ footer > .player {
 /* SCREEN / (XL) Extra-Large */
 @media screen and (min-width:1200px) {
 
-    /* selettore */ {
+    
+    footer {
+        gap:7rem;
+    }
 
+    footer > .side {
+        width: 15%;
     }
 }
 
