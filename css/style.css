@@ -487,6 +487,9 @@ footer > .player {
 .player .controller {
     display: flex;
     justify-content: space-around;
+    
+    margin: 0 auto;
+    width: 200px;
 }
 
 .player .controller button {
