@@ -125,7 +125,7 @@ body {
     --footer_height: 100px;
     --app-top_height: 100vh - var(--footer_height);
     --header_height: 70px;
-    --main_height: 100% - var(--header_height);
+    --main_height: 100vh - var(--header_height) - var(--footer_height);
     --sidebar_width: 40px;
     --app-content_width: 100% - var(--sidebar_width);
     --sidebar-content_width: 50px;
@@ -187,6 +187,7 @@ img {
 .app-top {
     flex-grow: 1;
     height: 100vh - var(--app-top_height);
+    min-height: 20px;
 
     display:flex;
 
@@ -209,7 +210,7 @@ img {
 
 .sidebar {
     flex-grow: 0;
-    width: var(--sidebar_width);
+    min-width: var(--sidebar_width);
     padding:0.5rem;
     background-color: black;
     font-size: 0.7rem;
@@ -382,7 +383,7 @@ main {
     background-color: #141922;
 
     /* ATTIVARE ALLA PUBBLICAZIONE */
-    /* overflow: auto; */
+    overflow: auto;
 }
 
 /**********************************************************
