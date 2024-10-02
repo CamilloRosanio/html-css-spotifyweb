@@ -462,6 +462,8 @@ main nav a:focus .focus {
 /* # SECTION - RECENTLY PLAYED */
 
 main .recently-played {
+    display: flex;
+    flex-direction: column;
     overflow: auto;
 }
 
@@ -473,16 +475,16 @@ main .recently-played {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
-
-    overflow: auto;
+    min-width:400px
 }
 
 .recently-played .card {
-    width:40%;
+    flex: 0 0 170px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap:0.2rem;
+    
 }
 
 main .card-container .card_image {
@@ -740,9 +742,11 @@ footer .right .bar_volume {
 /* SCREEN / (M) Medium */
 @media screen and (min-width:768px) {
 
-     /* selettore */ {
-
-     }
+    .recently-played .card-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        min-width:50px;
+    }
 }
 
 /* SCREEN / (L) Large */
