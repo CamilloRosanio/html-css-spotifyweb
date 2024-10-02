@@ -288,13 +288,14 @@ img {
 }
 
         /* # HOVER */
-.sidebar nav li:hover svg {
-    fill:white;
-}
 
-.sidebar nav li:hover span {
-    color:white;
-}
+        .sidebar nav li:hover svg {
+            fill:white;
+        }
+
+        .sidebar nav li:hover span {
+            color:white;
+        }
 
 
 /* # PLAYLIST */
@@ -314,15 +315,17 @@ img {
     gap: 0.5rem;
 }
 
-        /* #HOVER */
-.playlist .creation:hover button {
-    background-color: white;
-}
+        /* #HOVER + FOCUS */
 
-.playlist .creation:hover span {
-    color: white;
-}
+        .playlist .creation:hover button {
+            background-color: white;
+        }
 
+        .playlist .creation:hover span {
+            color: white;
+        }
+
+        
 .sidebar button {
     display:flex;
     justify-content: center;
@@ -400,7 +403,7 @@ header {
     align-items: center;
 }
 
-header a {
+header .upgrade {
     vertical-align: center;
     height: 30px;
     padding:0.5rem 1.5rem;
@@ -411,6 +414,12 @@ header a {
     font-size: 0.7rem;
 
 }
+
+        /* # HOVER */
+
+        header .upgrade:hover {
+            padding: 0.5rem 2.3rem;
+        }
 
 
 /**********************************************************
@@ -465,9 +474,15 @@ main nav .focus {
     background-color: greenyellow;
 }
 
-main nav a:focus .focus {
-    display:block;
-}
+        /* # FOCUS */
+
+        main nav a:focus .focus {
+            display:block;
+        }
+
+        main nav a:focus{
+            color: white;
+        }
 
 
 /* MAIN - CARD SLIDERS */
@@ -529,32 +544,32 @@ main .popular img {
 }
 
 
-/* # CARD HOVER */
+        /* # CARD HOVER */
 
-main .card_hover {
-    display: none;
-    width: var(--card_img_width);
-    aspect-ratio: 1/1;
-    flex-grow: 1;
+        main .card_hover {
+            display: none;
+            width: var(--card_img_width);
+            aspect-ratio: 1/1;
+            flex-grow: 1;
 
-    text-align: center;
-    vertical-align: center;
-    line-height: var(--card_img_width);
-    font-size: 4rem;
+            text-align: center;
+            vertical-align: center;
+            line-height: var(--card_img_width);
+            font-size: 4rem;
 
-    background-color: #00000067;
+            background-color: #00000067;
 
-    position: absolute;
-    z-index: 2;
-}
+            position: absolute;
+            z-index: 2;
+        }
 
-main .popular .card_hover {
-    border-radius: 50%;
-}
+        main .popular .card_hover {
+            border-radius: 50%;
+        }
 
-main .card-container:hover .card_hover {
-    display: block;
-}
+        main .card:hover .card_hover {
+            display: block;
+        }
 
 
 /**********************************************************
@@ -774,6 +789,12 @@ footer .right .bar_volume {
 
         overflow:auto;
     }
+
+            /* # HOVER */
+
+            .playlist li:hover {
+                color: white;
+            }
 
 
     /* # SIDEBAR BOTTOM */
