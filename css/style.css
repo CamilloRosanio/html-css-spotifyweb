@@ -288,6 +288,15 @@ img {
     display: inline;
 }
 
+        /* # HOVER */
+.sidebar nav li:hover svg {
+    fill:white;
+}
+
+.sidebar nav li:hover span {
+    color:white;
+}
+
 
 /* # PLAYLIST */
 
@@ -304,6 +313,15 @@ img {
     display:flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+        /* #HOVER */
+.playlist .creation:hover button {
+    background-color: white;
+}
+
+.playlist .creation:hover span {
+    color: white;
 }
 
 .sidebar button {
