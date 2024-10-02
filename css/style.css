@@ -2,13 +2,9 @@
 
 1) scroll della Playlist
 
-2) <a> premuto di colore più chiaro (sezione corrente come Home)
+2) effetti dinamici con :pseudo classi
 
-3) effetti dinamici con :pseudo classi
-
-4) quando Home è premuta aggiungere il BORDER SX verde
-
-5) scroll no-wrap RECENTLY PLAYED cards
+3) quando Home è premuta aggiungere il BORDER SX verde
 
 */
 
@@ -144,6 +140,7 @@ body {
     --sidebar_width: 40px;
     --app-content_width: 100% - var(--sidebar_width);
     --sidebar-content_width: 25px;
+    --card_img_width: 170px;
 }
 
 /**********************************************************
@@ -341,6 +338,16 @@ img {
 
 }
 
+.playlist ul {
+    display:flex;
+    flex-direction: column;
+    
+    /* min-height: 40px;
+    max-height: 200px; */
+    flex-shrink: 1;
+    overflow:auto;
+}
+
 .playlist li {
     margin-bottom: 0.5rem;
 }
@@ -421,6 +428,10 @@ main {
     overflow: auto;
 }
 
+main section {
+    margin-bottom: 2rem;
+}
+
 
 /* # NAVIGAZIONE */
 
@@ -459,32 +470,33 @@ main nav a:focus .focus {
 }
 
 
-/* # SECTION - RECENTLY PLAYED */
+/* MAIN - CARD SLIDERS */
 
-main .recently-played {
+main section {
     display: flex;
     flex-direction: column;
     overflow: auto;
 }
 
-.recently-played h3 {
+main section h3 {
     margin-bottom: 1rem;
 }
 
-.recently-played .card-container {
+main section .card-container {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
-    min-width:400px
+    min-width:400px;
+
+    position: relative;
 }
 
-.recently-played .card {
-    flex: 0 0 170px;
+main .card-container .card {
+    flex: 0 0 var(--card_img_width);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap:0.2rem;
-    
 }
 
 main .card-container .card_image {
@@ -500,6 +512,48 @@ main .card-container p {
     color: #797c80;
     font-size: .7rem;
     font-weight: 600;
+}
+
+main section > p {
+    margin-bottom: 1rem;
+    color: #797c80;
+    font-size: .7rem;
+    font-weight: 700;
+}
+
+
+/* # SECTION - POPULAR */
+
+main .popular img {
+    border-radius: 50%;
+}
+
+
+/* # CARD HOVER */
+
+main .card_hover {
+    display: none;
+    width: var(--card_img_width);
+    aspect-ratio: 1/1;
+    flex-grow: 1;
+
+    text-align: center;
+    vertical-align: center;
+    line-height: var(--card_img_width);
+    font-size: 4rem;
+
+    background-color: #00000067;
+
+    position: absolute;
+    z-index: 2;
+}
+
+main .popular .card_hover {
+    border-radius: 50%;
+}
+
+main .card-container:hover .card_hover {
+    display: block;
 }
 
 
@@ -717,6 +771,8 @@ footer .right .bar_volume {
         display: flex;
         flex-direction: column;
         gap:0.8rem;
+
+        overflow:auto;
     }
 
 
